@@ -5,17 +5,25 @@ import cv2
 def webcam_predict(input_model, label_dict):
     # Turn on webcam for prediction
     cap = cv2.VideoCapture(0)
+    
+    # Check if webcam is available
+    if not cap.isOpened():
+        print("Error: Could not open webcam. Please ensure a webcam is connected.")
+        return
+    
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 
+    print("Webcam started. Press SPACE to exit.")
+    
     while True:
         # Capture frame-by-frame
         ret, frame = cap.read()
         if not ret:
+            print("Error: Failed to read frame from webcam")
             break
 
-        # Mirror frame horizontally
-        frame = cv2.flip(frame, 1)
+        # Don't mirror frame (removed horizontal flip)
 
         # Display frame with results
         results = input_model.predict(frame, conf=0.6)
@@ -38,14 +46,14 @@ card_dict = {
     8: '3 of Diamonds', 9: '3 of Hearts', 10: '3 of Spades', 11: '3 of Clubs',
     12: '4 of Diamonds', 13: '4 of Hearts', 14: '4 of Spades', 15: '4 of Clubs',
     16: '5 of Diamonds', 17: '5 of Hearts', 18: '5 of Spades', 19: '5 of Clubs',
-    20: '5 of Hearts', 21: '6 of Diamonds', 22: '6 of Hearts', 23: '6 of Spades', 24: '6 of Clubs',
-    25: '7 of Diamonds', 26: '7 of Hearts', 27: '7 of Spades', 28: '7 of Clubs',
-    29: '8 of Diamonds', 30: '8 of Hearts', 31: '8 of Spades', 32: '8 of Clubs',
-    33: '9 of Diamonds', 34: '9 of Hearts', 35: '9 of Spades', 36: '9 of Clubs',
-    37: 'Ace of Diamonds', 38: 'Ace of Hearts', 39: 'Ace of Spades', 40: 'Ace of Clubs',
-    41: 'Jack of Diamonds', 42: 'Jack of Hearts', 43: 'Jack of Spades', 44: 'Jack of Clubs',
-    45: 'King of Diamonds', 46: 'King of Hearts', 47: 'King of Spades', 48: 'King of Clubs',
-    49: 'Queen of Diamonds', 50: 'Queen of Hearts', 51: 'Queen of Spades', 52: 'Queen of Clubs'
+    20: '6 of Diamonds', 21: '6 of Hearts', 22: '6 of Spades', 23: '6 of Clubs',
+    24: '7 of Diamonds', 25: '7 of Hearts', 26: '7 of Spades', 27: '7 of Clubs',
+    28: '8 of Diamonds', 29: '8 of Hearts', 30: '8 of Spades', 31: '8 of Clubs',
+    32: '9 of Diamonds', 33: '9 of Hearts', 34: '9 of Spades', 35: '9 of Clubs',
+    36: 'Ace of Diamonds', 37: 'Ace of Hearts', 38: 'Ace of Spades', 39: 'Ace of Clubs',
+    40: 'Jack of Diamonds', 41: 'Jack of Hearts', 42: 'Jack of Spades', 43: 'Jack of Clubs',
+    44: 'King of Diamonds', 45: 'King of Hearts', 46: 'King of Spades', 47: 'King of Clubs',
+    48: 'Queen of Diamonds', 49: 'Queen of Hearts', 50: 'Queen of Spades', 51: 'Queen of Clubs'
 }
 
 
@@ -53,9 +61,11 @@ card_dict = {
 # weights_path = './yolov8n.pt'
 weights_path = 'runs/detect/train5/weights/best.pt'
 
-
-model = YOLO(weights_path)
-print("Model successfully loaded")
-
-
-webcam_predict(model, label_dict=card_dict)
+try:
+    model = YOLO(weights_path)
+    print("Model successfully loaded")
+    webcam_predict(model, label_dict=card_dict)
+except FileNotFoundError:
+    print(f"Error: Model file not found at {weights_path}")
+except Exception as e:
+    print(f"Error: Failed to load model: {e}")
