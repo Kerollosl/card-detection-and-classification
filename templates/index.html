@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Card Detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgb(59, 130, 246); }
+            50% { border-color: rgb(147, 197, 253); }
+        }
+        .pulse-border {
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2">
+                🃏 Playing Card Detection
+            </h1>
+            <p class="text-gray-600">Real-time card detection using YOLOv8</p>
+        </div>
+
+        <!-- Main Card -->
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Video Feed -->
+                <div class="relative bg-gray-900">
+                    <img src="{{ url_for('video_feed') }}" 
+                         class="w-full h-auto border-4 pulse-border"
+                         alt="Video Feed"
+                         id="videoFeed">
+                    <div class="absolute top-4 right-4">
+                        <div class="flex items-center space-x-2 bg-green-500 text-white px-3 py-1.5 rounded-full text-sm font-medium">
+                            <span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                            <span>Live</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Section -->
+                <div class="p-6 bg-gradient-to-r from-purple-50 to-blue-50">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="text-sm text-gray-600 mb-1">Model</div>
+                            <div class="font-semibold text-gray-900">YOLOv8</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="text-sm text-gray-600 mb-1">Classes</div>
+                            <div class="font-semibold text-gray-900">52 Cards</div>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 shadow-sm">
+                            <div class="text-sm text-gray-600 mb-1">Status</div>
+                            <div class="font-semibold text-green-600" id="status">Active</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Instructions -->
+                <div class="p-6 border-t border-gray-200">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-3">📋 Instructions</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">•</span>
+                            <span>Hold a playing card in front of your camera</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">•</span>
+                            <span>The model will detect and classify the card in real-time</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">•</span>
+                            <span>Works with standard 52-card deck (Jokers not supported)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-purple-600 mr-2">•</span>
+                            <span>Ensure good lighting for best results</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Technical Info -->
+            <div class="mt-6 bg-white rounded-xl shadow-md p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-3">🔧 Technical Details</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                        <span class="font-medium text-gray-700">Framework:</span>
+                        <span class="text-gray-600 ml-2">Ultralytics YOLOv8</span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-gray-700">Backend:</span>
+                        <span class="text-gray-600 ml-2">Flask + OpenCV</span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-gray-700">Model Path:</span>
+                        <span class="text-gray-600 ml-2 text-xs">runs/detect/train5/weights/best.pt</span>
+                    </div>
+                    <div>
+                        <span class="font-medium text-gray-700">Input:</span>
+                        <span class="text-gray-600 ml-2">Webcam (Real-time)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check health status periodically
+        async function checkHealth() {
+            try {
+                const response = await fetch('/health');
+                const data = await response.json();
+                const statusEl = document.getElementById('status');
+                
+                if (data.model_loaded) {
+                    statusEl.textContent = 'Active';
+                    statusEl.className = 'font-semibold text-green-600';
+                } else {
+                    statusEl.textContent = 'Model Not Loaded';
+                    statusEl.className = 'font-semibold text-red-600';
+                }
+            } catch (error) {
+                console.error('Health check failed:', error);
+            }
+        }
+
+        // Check health on load and every 10 seconds
+        checkHealth();
+        setInterval(checkHealth, 10000);
+
+        // Handle video feed errors
+        document.getElementById('videoFeed').onerror = function() {
+            this.src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600"><rect width="800" height="600" fill="%23f3f4f6"/><text x="50%" y="50%" text-anchor="middle" fill="%236b7280" font-size="20">Camera feed unavailable</text></svg>';
+        };
+    </script>
+</body>
+</html>
