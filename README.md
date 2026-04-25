@@ -1,11 +1,6 @@
 # YOLOv8 Playing Card Detection and Classification Model
 
-## Kerollos Lowandy
-
-**Repository: card-detection-and-classification**
-
-## GitHub Link
-[https://github.com/Kerollosl/card-detection-and-classification](https://github.com/Kerollosl/card-detection-and-classification)
+A YOLOv8 object detection model that identifies and classifies playing cards from a standard 52-card deck in real time. Includes a Flask web app with a live webcam view for quick testing.
 
 ## 🚀 Quick Start - Web Interface
 
