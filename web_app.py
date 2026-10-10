@@ -8,7 +8,7 @@ from threading import Lock
 app = Flask(__name__)
 
 # Load the model
-MODEL_PATH = os.environ.get('CARD_MODEL','runs/detect/train5/weights/best.pt')
+MODEL_PATH = os.environ.get('CARD_MODEL_PATH',os.environ.get('CARD_MODEL','runs/detect/train5/weights/best.pt'))
 model = None
 
 def load_model():
@@ -23,24 +23,17 @@ def load_model():
 load_model()
 
 camera_lock=Lock()
-def generate_frames():
-    # A physical camera supports one active stream; report conflicts explicitly.
-    if not camera_lock.acquire(blocking=False):
-        return
-    camera=None
+def generate_frames(camera, release):
     try:
-        camera=cv2.VideoCapture(0)
-        if not camera.isOpened():raise RuntimeError('Server camera is unavailable')
         while True:
             success,frame=camera.read()
             if not success:break
-            annotated_frame=model(frame)[0].plot() if model is not None else frame
+            annotated_frame=model(frame)[0].plot()
             encoded,buffer=cv2.imencode('.jpg',annotated_frame)
             if not encoded:raise RuntimeError('Could not encode camera frame')
             yield b'--frame\r\nContent-Type: image/jpeg\r\n\r\n'+buffer.tobytes()+b'\r\n'
     finally:
-        if camera is not None:camera.release()
-        camera_lock.release()
+        release()
 
 @app.route('/')
 def index():
@@ -49,9 +42,30 @@ def index():
 @app.route('/video_feed')
 def video_feed():
     if model is None:return jsonify({'error':'Model weights are unavailable'}),503
-    if camera_lock.locked():return jsonify({'error':'Camera already streaming'}),409
-    return Response(generate_frames(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
+    if not camera_lock.acquire(blocking=False):return jsonify({'error':'Camera already streaming'}),409
+    camera=None
+    try:
+        camera=cv2.VideoCapture(0)
+        if not camera.isOpened():raise RuntimeError('Server camera is unavailable')
+    except Exception as error:
+        if camera is not None:camera.release()
+        camera_lock.release()
+        return jsonify({'error':str(error)}),503
+    released=False
+    def release():
+        nonlocal released
+        if not released:
+            released=True
+            try:camera.release()
+            finally:camera_lock.release()
+    stream=generate_frames(camera,release)
+    response=Response(stream,mimetype='multipart/x-mixed-replace; boundary=frame')
+    # Closing an unstarted generator does not run its finally clause.
+    def cleanup():
+        stream.close()
+        release()
+    response.call_on_close(cleanup)
+    return response
 
 @app.route('/health')
 def health():
