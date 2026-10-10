@@ -1,7 +1,5 @@
 ultralytics==8.2.76
-opencv-python==4.8.0.76
 roboflow==1.1.37
-PyYAML==6.0.2
-IPython==7.34.0
-flask==3.0.0
-numpy>=1.24.0
+numpy==1.26.4
+opencv-python==4.8.0.76
+Flask==3.0.3

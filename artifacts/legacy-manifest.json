@@ -1,0 +1,831 @@
+{
+  "version": 1,
+  "source_commit": "c188c1aefe4b72ad73d3d1ecf046995e41bbbc74",
+  "artifacts": [
+    {
+      "path": "runs/detect/train/args.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fd99251e50de36eb62abb97ec1bf42df80334439",
+      "size": 1547,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/fd99251e50de36eb62abb97ec1bf42df80334439"
+    },
+    {
+      "path": "runs/detect/train2/F1_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cc807a21c4e4fe1063b32d73f4481ff696fc2bc",
+      "size": 652310,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/5cc807a21c4e4fe1063b32d73f4481ff696fc2bc"
+    },
+    {
+      "path": "runs/detect/train2/PR_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d65ea1a389d4009a8af2ae2a37ac0bbde81fc44",
+      "size": 92182,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/7d65ea1a389d4009a8af2ae2a37ac0bbde81fc44"
+    },
+    {
+      "path": "runs/detect/train2/P_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47ac6eeebb46e55e1f5495d72f17f0a1e123d2a4",
+      "size": 444165,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/47ac6eeebb46e55e1f5495d72f17f0a1e123d2a4"
+    },
+    {
+      "path": "runs/detect/train2/R_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a37fbc6f00e307810ff54e20e6c604fd5527625",
+      "size": 488913,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2a37fbc6f00e307810ff54e20e6c604fd5527625"
+    },
+    {
+      "path": "runs/detect/train2/args.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e8fd358d3c47006e9c548139eac880ddad07fac4",
+      "size": 1549,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/e8fd358d3c47006e9c548139eac880ddad07fac4"
+    },
+    {
+      "path": "runs/detect/train2/confusion_matrix.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2800ed78c7a05e054ca6da372d7501cd407ceac",
+      "size": 427892,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/e2800ed78c7a05e054ca6da372d7501cd407ceac"
+    },
+    {
+      "path": "runs/detect/train2/confusion_matrix_normalized.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "131f051b55c944235d4bd999b181bd9b460d9c30",
+      "size": 430110,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/131f051b55c944235d4bd999b181bd9b460d9c30"
+    },
+    {
+      "path": "runs/detect/train2/events.out.tfevents.1722912158.2b2f2337b86b.3127.0",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "623ec0c9cecfeb559b1410f1cdc071f97b3bf9b2",
+      "size": 195799,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/623ec0c9cecfeb559b1410f1cdc071f97b3bf9b2"
+    },
+    {
+      "path": "runs/detect/train2/labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8510ab0990e01fe15dd44f952925f71c05c15797",
+      "size": 232867,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/8510ab0990e01fe15dd44f952925f71c05c15797"
+    },
+    {
+      "path": "runs/detect/train2/labels_correlogram.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59709b2934b486ba86c896e31ba1a68a4ee78a90",
+      "size": 264240,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/59709b2934b486ba86c896e31ba1a68a4ee78a90"
+    },
+    {
+      "path": "runs/detect/train2/results.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f0c93c726340dfa83c95c4078da807b20938c40",
+      "size": 5376,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/0f0c93c726340dfa83c95c4078da807b20938c40"
+    },
+    {
+      "path": "runs/detect/train2/results.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55875c9e33c2df92c95203fc59e6b6d5c51cfaa6",
+      "size": 273566,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/55875c9e33c2df92c95203fc59e6b6d5c51cfaa6"
+    },
+    {
+      "path": "runs/detect/train2/train_batch0.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81d337676cf49ee52465a06ebb3e12bf07e1bfe",
+      "size": 1118886,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c81d337676cf49ee52465a06ebb3e12bf07e1bfe"
+    },
+    {
+      "path": "runs/detect/train2/train_batch1.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12c982e47a119eaa5830d056be6895604f900e3a",
+      "size": 1061897,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/12c982e47a119eaa5830d056be6895604f900e3a"
+    },
+    {
+      "path": "runs/detect/train2/train_batch2.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c8f73c622717bdbcf998558995daef002275bed",
+      "size": 967764,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/6c8f73c622717bdbcf998558995daef002275bed"
+    },
+    {
+      "path": "runs/detect/train2/train_batch905.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7855cbba0550d38ffac97f85040a6de4fb5d36e9",
+      "size": 884392,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/7855cbba0550d38ffac97f85040a6de4fb5d36e9"
+    },
+    {
+      "path": "runs/detect/train2/train_batch906.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee4b9165e2e562a112ce3bee6d1fdc52e4c80b2",
+      "size": 927722,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2ee4b9165e2e562a112ce3bee6d1fdc52e4c80b2"
+    },
+    {
+      "path": "runs/detect/train2/train_batch907.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8f2752f48f41bc96d0c05b4f5714972dff28ba75",
+      "size": 895035,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/8f2752f48f41bc96d0c05b4f5714972dff28ba75"
+    },
+    {
+      "path": "runs/detect/train2/val_batch0_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3c430105a6989a495db70648f41a409dae73ece",
+      "size": 894883,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c3c430105a6989a495db70648f41a409dae73ece"
+    },
+    {
+      "path": "runs/detect/train2/val_batch0_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "866455eeea136d508e6971fa1f118f559a705d75",
+      "size": 908153,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/866455eeea136d508e6971fa1f118f559a705d75"
+    },
+    {
+      "path": "runs/detect/train2/val_batch1_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a122c297ec6ef38dc31685e6dd4675f381768e17",
+      "size": 890382,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/a122c297ec6ef38dc31685e6dd4675f381768e17"
+    },
+    {
+      "path": "runs/detect/train2/val_batch1_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c1712292d5d3cf619a4c10eab5e7bf902968f3bf",
+      "size": 900314,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c1712292d5d3cf619a4c10eab5e7bf902968f3bf"
+    },
+    {
+      "path": "runs/detect/train2/val_batch2_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4ae5a823efb6b3c86940bac7c39a3cc8409f8a6",
+      "size": 851731,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/b4ae5a823efb6b3c86940bac7c39a3cc8409f8a6"
+    },
+    {
+      "path": "runs/detect/train2/val_batch2_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5930974fac84a0ee428af8c2fc942de1682564a5",
+      "size": 867185,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/5930974fac84a0ee428af8c2fc942de1682564a5"
+    },
+    {
+      "path": "runs/detect/train2/weights/best.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd188f57a075c0d653ba1a3422c256c101956e05",
+      "size": 6266851,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/bd188f57a075c0d653ba1a3422c256c101956e05"
+    },
+    {
+      "path": "runs/detect/train2/weights/last.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5da454fe41b32163a61e8c31b094e3fbcf15992",
+      "size": 6266851,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/f5da454fe41b32163a61e8c31b094e3fbcf15992"
+    },
+    {
+      "path": "runs/detect/train3/F1_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97a215241524e3ad0b45a3357f40e9d768f979a3",
+      "size": 301902,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/97a215241524e3ad0b45a3357f40e9d768f979a3"
+    },
+    {
+      "path": "runs/detect/train3/PR_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25385729ae6dc13b86cd28efd8739b8473d4b26c",
+      "size": 76189,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/25385729ae6dc13b86cd28efd8739b8473d4b26c"
+    },
+    {
+      "path": "runs/detect/train3/P_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e11d5a2629c231d5e5112b26e615985f4fce31a6",
+      "size": 266022,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/e11d5a2629c231d5e5112b26e615985f4fce31a6"
+    },
+    {
+      "path": "runs/detect/train3/R_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2150054fafbb7caaef4bb23732f1ff1f6137b85b",
+      "size": 255511,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2150054fafbb7caaef4bb23732f1ff1f6137b85b"
+    },
+    {
+      "path": "runs/detect/train3/args.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18aebbf5a6686f875a1a84b6af93e7a6529d82a1",
+      "size": 1553,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/18aebbf5a6686f875a1a84b6af93e7a6529d82a1"
+    },
+    {
+      "path": "runs/detect/train3/confusion_matrix.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd317b0d118a4c21cf96c184c257ba970b56b475",
+      "size": 426630,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/dd317b0d118a4c21cf96c184c257ba970b56b475"
+    },
+    {
+      "path": "runs/detect/train3/confusion_matrix_normalized.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "431e0e8105af8dc161975e4aab978edcc60a3d2b",
+      "size": 428852,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/431e0e8105af8dc161975e4aab978edcc60a3d2b"
+    },
+    {
+      "path": "runs/detect/train3/events.out.tfevents.1723076928.3ed1a4ed29e4.232.0",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a6687e6a8e9d85762a4cbbdd32ae559727836af",
+      "size": 195799,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/1a6687e6a8e9d85762a4cbbdd32ae559727836af"
+    },
+    {
+      "path": "runs/detect/train3/labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8510ab0990e01fe15dd44f952925f71c05c15797",
+      "size": 232867,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/8510ab0990e01fe15dd44f952925f71c05c15797"
+    },
+    {
+      "path": "runs/detect/train3/labels_correlogram.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59709b2934b486ba86c896e31ba1a68a4ee78a90",
+      "size": 264240,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/59709b2934b486ba86c896e31ba1a68a4ee78a90"
+    },
+    {
+      "path": "runs/detect/train3/results.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd7da10fd0fa306b6a6dbccf024d985f4b6622a1",
+      "size": 5376,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/bd7da10fd0fa306b6a6dbccf024d985f4b6622a1"
+    },
+    {
+      "path": "runs/detect/train3/results.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ae978aca28eb2c6861a435773fccfd44ae5622e",
+      "size": 311501,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/9ae978aca28eb2c6861a435773fccfd44ae5622e"
+    },
+    {
+      "path": "runs/detect/train3/train_batch0.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81d337676cf49ee52465a06ebb3e12bf07e1bfe",
+      "size": 1118886,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c81d337676cf49ee52465a06ebb3e12bf07e1bfe"
+    },
+    {
+      "path": "runs/detect/train3/train_batch1.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12c982e47a119eaa5830d056be6895604f900e3a",
+      "size": 1061897,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/12c982e47a119eaa5830d056be6895604f900e3a"
+    },
+    {
+      "path": "runs/detect/train3/train_batch2.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c434008c35a62ce04b7df6f306a79189f6f86d2d",
+      "size": 1016361,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c434008c35a62ce04b7df6f306a79189f6f86d2d"
+    },
+    {
+      "path": "runs/detect/train3/train_batch905.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7855cbba0550d38ffac97f85040a6de4fb5d36e9",
+      "size": 884392,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/7855cbba0550d38ffac97f85040a6de4fb5d36e9"
+    },
+    {
+      "path": "runs/detect/train3/train_batch906.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee4b9165e2e562a112ce3bee6d1fdc52e4c80b2",
+      "size": 927722,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2ee4b9165e2e562a112ce3bee6d1fdc52e4c80b2"
+    },
+    {
+      "path": "runs/detect/train3/train_batch907.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97c001ec8318773c7d5e9f4a098576ac9919afb9",
+      "size": 878174,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/97c001ec8318773c7d5e9f4a098576ac9919afb9"
+    },
+    {
+      "path": "runs/detect/train3/val_batch0_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3c430105a6989a495db70648f41a409dae73ece",
+      "size": 894883,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c3c430105a6989a495db70648f41a409dae73ece"
+    },
+    {
+      "path": "runs/detect/train3/val_batch0_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9059c764f2a95f071381435ab8ee6caf02517ed",
+      "size": 903977,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/f9059c764f2a95f071381435ab8ee6caf02517ed"
+    },
+    {
+      "path": "runs/detect/train3/val_batch1_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a122c297ec6ef38dc31685e6dd4675f381768e17",
+      "size": 890382,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/a122c297ec6ef38dc31685e6dd4675f381768e17"
+    },
+    {
+      "path": "runs/detect/train3/val_batch1_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de8cfa8f4e8640ee71b9f2fac9d1376fa4b5ee37",
+      "size": 901732,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/de8cfa8f4e8640ee71b9f2fac9d1376fa4b5ee37"
+    },
+    {
+      "path": "runs/detect/train3/val_batch2_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4ae5a823efb6b3c86940bac7c39a3cc8409f8a6",
+      "size": 851731,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/b4ae5a823efb6b3c86940bac7c39a3cc8409f8a6"
+    },
+    {
+      "path": "runs/detect/train3/val_batch2_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "460283baed9324d00c5e8dc0b528ed82e60f326c",
+      "size": 862859,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/460283baed9324d00c5e8dc0b528ed82e60f326c"
+    },
+    {
+      "path": "runs/detect/train3/weights/best.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b321833fdc72c684e5a3c8242483bb4689782e01",
+      "size": 6266851,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/b321833fdc72c684e5a3c8242483bb4689782e01"
+    },
+    {
+      "path": "runs/detect/train3/weights/last.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3af808b811716e2475e95f7ede618739925b81b5",
+      "size": 6266851,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/3af808b811716e2475e95f7ede618739925b81b5"
+    },
+    {
+      "path": "runs/detect/train32/F1_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d85a6a8408b0e61396b5e549cb2593a4bb1afb15",
+      "size": 236815,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/d85a6a8408b0e61396b5e549cb2593a4bb1afb15"
+    },
+    {
+      "path": "runs/detect/train32/PR_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7b5ec1cfb59f2f185a6bde9d69d2529df3855a1",
+      "size": 73372,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/f7b5ec1cfb59f2f185a6bde9d69d2529df3855a1"
+    },
+    {
+      "path": "runs/detect/train32/P_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "91cf1741897d0573d0c5993ad219477e38295c33",
+      "size": 197235,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/91cf1741897d0573d0c5993ad219477e38295c33"
+    },
+    {
+      "path": "runs/detect/train32/R_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c86e045ed7090aa8792d9885f3be6621ff46c3ba",
+      "size": 211393,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c86e045ed7090aa8792d9885f3be6621ff46c3ba"
+    },
+    {
+      "path": "runs/detect/train32/confusion_matrix.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8b4965e9a91d2d95cee926adab614898c935808",
+      "size": 425942,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c8b4965e9a91d2d95cee926adab614898c935808"
+    },
+    {
+      "path": "runs/detect/train32/confusion_matrix_normalized.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "024fdcfdb1a993d54678aa7d6556c26dad94e8af",
+      "size": 428006,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/024fdcfdb1a993d54678aa7d6556c26dad94e8af"
+    },
+    {
+      "path": "runs/detect/train32/val_batch0_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3c430105a6989a495db70648f41a409dae73ece",
+      "size": 894883,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c3c430105a6989a495db70648f41a409dae73ece"
+    },
+    {
+      "path": "runs/detect/train32/val_batch0_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "662b2df83be20b48b3b91f14270fc6805856ee81",
+      "size": 904742,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/662b2df83be20b48b3b91f14270fc6805856ee81"
+    },
+    {
+      "path": "runs/detect/train32/val_batch1_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a122c297ec6ef38dc31685e6dd4675f381768e17",
+      "size": 890382,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/a122c297ec6ef38dc31685e6dd4675f381768e17"
+    },
+    {
+      "path": "runs/detect/train32/val_batch1_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09e58e80af7e94b7b0e979898a21e2de64393a62",
+      "size": 902696,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/09e58e80af7e94b7b0e979898a21e2de64393a62"
+    },
+    {
+      "path": "runs/detect/train32/val_batch2_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4ae5a823efb6b3c86940bac7c39a3cc8409f8a6",
+      "size": 851731,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/b4ae5a823efb6b3c86940bac7c39a3cc8409f8a6"
+    },
+    {
+      "path": "runs/detect/train32/val_batch2_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2558ee9e1b030d2e241830dea372c72aa31c0e02",
+      "size": 864773,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2558ee9e1b030d2e241830dea372c72aa31c0e02"
+    },
+    {
+      "path": "runs/detect/train5/F1_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bac5c8df6b0ede2bb9da00c132c076de70097568",
+      "size": 238239,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/bac5c8df6b0ede2bb9da00c132c076de70097568"
+    },
+    {
+      "path": "runs/detect/train5/PR_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7b5ec1cfb59f2f185a6bde9d69d2529df3855a1",
+      "size": 73372,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/f7b5ec1cfb59f2f185a6bde9d69d2529df3855a1"
+    },
+    {
+      "path": "runs/detect/train5/P_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af7e2b80a04f6751f6a00a221fcf1493d0e32623",
+      "size": 197110,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/af7e2b80a04f6751f6a00a221fcf1493d0e32623"
+    },
+    {
+      "path": "runs/detect/train5/R_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4aab7d609463a6313834ca69b81faeae54ece0b7",
+      "size": 214568,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/4aab7d609463a6313834ca69b81faeae54ece0b7"
+    },
+    {
+      "path": "runs/detect/train5/args.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "18aebbf5a6686f875a1a84b6af93e7a6529d82a1",
+      "size": 1553,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/18aebbf5a6686f875a1a84b6af93e7a6529d82a1"
+    },
+    {
+      "path": "runs/detect/train5/confusion_matrix.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "27afa0593f493bb6be5747d61f7cd21f1f7ed85f",
+      "size": 425950,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/27afa0593f493bb6be5747d61f7cd21f1f7ed85f"
+    },
+    {
+      "path": "runs/detect/train5/confusion_matrix_normalized.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d9d7222653c255ec8319dc6a94e7e8d35573bc4",
+      "size": 428030,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/8d9d7222653c255ec8319dc6a94e7e8d35573bc4"
+    },
+    {
+      "path": "runs/detect/train5/events.out.tfevents.1723313548.f50833a26f37.1756.0",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cccda41f7c6007673cfaeabdc4dc0d9e2780b81",
+      "size": 192265,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/3cccda41f7c6007673cfaeabdc4dc0d9e2780b81"
+    },
+    {
+      "path": "runs/detect/train5/labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8510ab0990e01fe15dd44f952925f71c05c15797",
+      "size": 232867,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/8510ab0990e01fe15dd44f952925f71c05c15797"
+    },
+    {
+      "path": "runs/detect/train5/labels_correlogram.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59709b2934b486ba86c896e31ba1a68a4ee78a90",
+      "size": 264240,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/59709b2934b486ba86c896e31ba1a68a4ee78a90"
+    },
+    {
+      "path": "runs/detect/train5/results.csv",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7938711e343af86a7e35ddf7364193b2b6bb1f9d",
+      "size": 5376,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/7938711e343af86a7e35ddf7364193b2b6bb1f9d"
+    },
+    {
+      "path": "runs/detect/train5/results.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95f0cfe180a0bc738cb5f28bde0ff4cad1e8c4aa",
+      "size": 326779,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/95f0cfe180a0bc738cb5f28bde0ff4cad1e8c4aa"
+    },
+    {
+      "path": "runs/detect/train5/train_batch0.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c81d337676cf49ee52465a06ebb3e12bf07e1bfe",
+      "size": 1118886,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c81d337676cf49ee52465a06ebb3e12bf07e1bfe"
+    },
+    {
+      "path": "runs/detect/train5/train_batch1.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12c982e47a119eaa5830d056be6895604f900e3a",
+      "size": 1061897,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/12c982e47a119eaa5830d056be6895604f900e3a"
+    },
+    {
+      "path": "runs/detect/train5/train_batch2.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c434008c35a62ce04b7df6f306a79189f6f86d2d",
+      "size": 1016361,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c434008c35a62ce04b7df6f306a79189f6f86d2d"
+    },
+    {
+      "path": "runs/detect/train5/train_batch905.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7855cbba0550d38ffac97f85040a6de4fb5d36e9",
+      "size": 884392,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/7855cbba0550d38ffac97f85040a6de4fb5d36e9"
+    },
+    {
+      "path": "runs/detect/train5/train_batch906.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ee4b9165e2e562a112ce3bee6d1fdc52e4c80b2",
+      "size": 927722,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2ee4b9165e2e562a112ce3bee6d1fdc52e4c80b2"
+    },
+    {
+      "path": "runs/detect/train5/train_batch907.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97c001ec8318773c7d5e9f4a098576ac9919afb9",
+      "size": 878174,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/97c001ec8318773c7d5e9f4a098576ac9919afb9"
+    },
+    {
+      "path": "runs/detect/train5/val_batch0_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "506ed7c32363b957e30527297e5b055d1c31e9bd",
+      "size": 894049,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/506ed7c32363b957e30527297e5b055d1c31e9bd"
+    },
+    {
+      "path": "runs/detect/train5/val_batch0_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6d4f07d1db8607cbaffb41cbb95bad098cdb1bd",
+      "size": 904518,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/d6d4f07d1db8607cbaffb41cbb95bad098cdb1bd"
+    },
+    {
+      "path": "runs/detect/train5/val_batch1_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aa785483ac6e6e6d523b4f951ea8aed66e443cce",
+      "size": 851309,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/aa785483ac6e6e6d523b4f951ea8aed66e443cce"
+    },
+    {
+      "path": "runs/detect/train5/val_batch1_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b39ea09588d03d153d467e62285c9b905bebf9c",
+      "size": 860599,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2b39ea09588d03d153d467e62285c9b905bebf9c"
+    },
+    {
+      "path": "runs/detect/train5/val_batch2_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6a6f6ed57421abeff9bbce2b72b2cfe5505be14",
+      "size": 889569,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/d6a6f6ed57421abeff9bbce2b72b2cfe5505be14"
+    },
+    {
+      "path": "runs/detect/train5/val_batch2_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "63efe0a353d1c96508ab9465690e0b53d5386a77",
+      "size": 901977,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/63efe0a353d1c96508ab9465690e0b53d5386a77"
+    },
+    {
+      "path": "runs/detect/train5/weights/best.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5f9546bfe5c644456e1cebe30da32d95938ac6e",
+      "size": 6266851,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/f5f9546bfe5c644456e1cebe30da32d95938ac6e"
+    },
+    {
+      "path": "runs/detect/train5/weights/last.pt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1de04bfbc013b0c75ce431d5f2f3e2dd20515f85",
+      "size": 6266851,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/1de04bfbc013b0c75ce431d5f2f3e2dd20515f85"
+    },
+    {
+      "path": "runs/detect/train52/F1_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bffe796e4c87fdcfc4a5458c3fcab58c81a6987f",
+      "size": 234563,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/bffe796e4c87fdcfc4a5458c3fcab58c81a6987f"
+    },
+    {
+      "path": "runs/detect/train52/PR_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c53938c4e83b581e6b47572984155439f127da97",
+      "size": 80112,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/c53938c4e83b581e6b47572984155439f127da97"
+    },
+    {
+      "path": "runs/detect/train52/P_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "767a862e5a57e9f93e835f635871208d97ff233f",
+      "size": 200761,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/767a862e5a57e9f93e835f635871208d97ff233f"
+    },
+    {
+      "path": "runs/detect/train52/R_curve.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3aa14436fd6309f9f60aea0682337f7e5d13bd6c",
+      "size": 219496,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/3aa14436fd6309f9f60aea0682337f7e5d13bd6c"
+    },
+    {
+      "path": "runs/detect/train52/confusion_matrix.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "30f45e32d4cb0eae24f21d313ca76f778ac71b79",
+      "size": 423118,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/30f45e32d4cb0eae24f21d313ca76f778ac71b79"
+    },
+    {
+      "path": "runs/detect/train52/confusion_matrix_normalized.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5f67dd182a91577f6b4a34b79424856cc83e0472",
+      "size": 427956,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/5f67dd182a91577f6b4a34b79424856cc83e0472"
+    },
+    {
+      "path": "runs/detect/train52/val_batch0_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "421dfd5e62a291a6da6cb30baf7d809110dfc4cb",
+      "size": 915466,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/421dfd5e62a291a6da6cb30baf7d809110dfc4cb"
+    },
+    {
+      "path": "runs/detect/train52/val_batch0_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bd55887220ee6fc499ac0570ce10e38be7f88d22",
+      "size": 919566,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/bd55887220ee6fc499ac0570ce10e38be7f88d22"
+    },
+    {
+      "path": "runs/detect/train52/val_batch1_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3479fcefaaedb1dec14c0c9185635a989f0f118d",
+      "size": 901740,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/3479fcefaaedb1dec14c0c9185635a989f0f118d"
+    },
+    {
+      "path": "runs/detect/train52/val_batch1_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a96781d5a2d8b4e0c655cdddff2e60d7d8c5a85",
+      "size": 911008,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/2a96781d5a2d8b4e0c655cdddff2e60d7d8c5a85"
+    },
+    {
+      "path": "runs/detect/train52/val_batch2_labels.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de8650b4ad3495b26c7113d60382a84024c80730",
+      "size": 877142,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/de8650b4ad3495b26c7113d60382a84024c80730"
+    },
+    {
+      "path": "runs/detect/train52/val_batch2_pred.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3aaaf402ab9d133f818149a606e02068a4679ad",
+      "size": 888425,
+      "url": "https://api.github.com/repos/Kerollosl/card-detection-and-classification/git/blobs/f3aaaf402ab9d133f818149a606e02068a4679ad"
+    }
+  ],
+  "status": "Historical artifacts retained. Training/evaluation and redistribution rights are not independently verified."
+}

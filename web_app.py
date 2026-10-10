@@ -3,11 +3,12 @@ import numpy as np
 from flask import Flask, render_template, Response, jsonify
 from ultralytics import YOLO
 import os
+from threading import Lock
 
 app = Flask(__name__)
 
 # Load the model
-MODEL_PATH = 'runs/detect/train5/weights/best.pt'
+MODEL_PATH = os.environ.get('CARD_MODEL','runs/detect/train5/weights/best.pt')
 model = None
 
 def load_model():
@@ -21,33 +22,25 @@ def load_model():
 
 load_model()
 
+camera_lock=Lock()
 def generate_frames():
-    camera = cv2.VideoCapture(0)
-    
-    while True:
-        success, frame = camera.read()
-        if not success:
-            break
-        
-        if model is not None:
-            # Run inference
-            results = model(frame)
-            
-            # Draw results on frame
-            annotated_frame = results[0].plot()
-        else:
-            annotated_frame = frame
-            cv2.putText(annotated_frame, "Model not loaded", (10, 30), 
-                       cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
-        
-        # Encode frame
-        ret, buffer = cv2.imencode('.jpg', annotated_frame)
-        frame = buffer.tobytes()
-        
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-    
-    camera.release()
+    # A physical camera supports one active stream; report conflicts explicitly.
+    if not camera_lock.acquire(blocking=False):
+        return
+    camera=None
+    try:
+        camera=cv2.VideoCapture(0)
+        if not camera.isOpened():raise RuntimeError('Server camera is unavailable')
+        while True:
+            success,frame=camera.read()
+            if not success:break
+            annotated_frame=model(frame)[0].plot() if model is not None else frame
+            encoded,buffer=cv2.imencode('.jpg',annotated_frame)
+            if not encoded:raise RuntimeError('Could not encode camera frame')
+            yield b'--frame\r\nContent-Type: image/jpeg\r\n\r\n'+buffer.tobytes()+b'\r\n'
+    finally:
+        if camera is not None:camera.release()
+        camera_lock.release()
 
 @app.route('/')
 def index():
@@ -55,6 +48,8 @@ def index():
 
 @app.route('/video_feed')
 def video_feed():
+    if model is None:return jsonify({'error':'Model weights are unavailable'}),503
+    if camera_lock.locked():return jsonify({'error':'Camera already streaming'}),409
     return Response(generate_frames(),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
@@ -69,4 +64,5 @@ def health():
 if __name__ == '__main__':
     print("🚀 Starting Card Detection Web App")
     print("📍 Open http://localhost:5003 in your browser")
-    app.run(host='0.0.0.0', port=5003, debug=True)
+    app.run(host=os.environ.get('CARD_HOST', '127.0.0.1'), port=int(os.environ.get('CARD_PORT', '5003')), debug=os.environ.get('CARD_DEBUG') == '1')
+

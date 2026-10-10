@@ -97,3 +97,7 @@ Then open http://localhost:5003 in your browser!
 - Ensure good lighting for best detection results
 - Camera permissions must be granted for web interface
 - Model weights must be present at `runs/detect/train5/weights/best.pt`
+
+## Cleanup behavior and validation limits
+
+The Flask stream uses the server’s physical camera, not the visitor’s camera. It supports one active capture, releases hardware on disconnect, and reports missing models/camera failures. Default binding is loopback with debug disabled; CARD_DEBUG is an explicit development opt-in. Set CARD_MODEL_PATH and ROBOFLOW_API_KEY externally; revoke the previously committed credential.
