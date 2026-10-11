@@ -1,4 +1,4 @@
-ultralytics==8.2.76
+ultralytics==8.4.174
 roboflow==1.7.0
 numpy==1.26.4
 opencv-python==4.11.0.86
